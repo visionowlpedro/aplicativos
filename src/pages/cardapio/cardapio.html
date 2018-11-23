@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cardápio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor='let cardapio of cardapios'>
+    <ion-card-content>
+      <ion-card-title>
+        {{ cardapio.nome }} - R$ {{ cardapio.preco }},00
+      </ion-card-title>
+      <p>{{ cardapio.ingredientes }}</p>
+
+      <ion-item color="assertive" id="home-list-item-7">
+        <button id="pedido-button3" (click)="submit(cardapio)" ion-button color="stable" block>Fazer pedido</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

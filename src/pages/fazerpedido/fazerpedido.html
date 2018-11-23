@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fazer Pedido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        {{ pedido.cardapio.nome }}
+      </ion-card-title>
+      <p>{{ pedido.cardapio.ingredientes }}</p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <form id="cadastro-form1">
+    <ion-item id="pedido-input1">
+      <ion-input type="text" [(ngModel)]="pedido.observacao" name="observacao" placeholder="Observação"></ion-input>
+    </ion-item>
+    <ion-item color="assertive" id="home-list-item-7">
+      <button id="pedido-button3" (click)="submit()" ion-button color="stable" block>Confirmar pedido</button>
+    </ion-item>
+    <ion-item color="assertive" id="home-list-item-7">
+      <button id="pedido-button3" ion-button color="stable" block>Realizar outro pedido</button>
+    </ion-item>
+  </form>
+
+</ion-content>

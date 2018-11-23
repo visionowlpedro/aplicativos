@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Restaurantes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor='let restaurante of restaurantes' (click)="seleciona(restaurante)">
+    <img src="{{ restaurante.imgurl }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ restaurante.nome }}
+      </ion-card-title>
+      <p>{{ restaurante.telefone }}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
